@@ -22,8 +22,8 @@
  * THE SOFTWARE.
  */
 
-#ifndef _NICENANO_H
-#define _NICENANO_H
+#ifndef _TETON_H
+#define _TETON_H
 
 #define _PINNUM(port, pin) ((port)*32 + (pin))
 
@@ -31,7 +31,7 @@
 /* LED
  *------------------------------------------------------------------*/
 #define LEDS_NUMBER 1
-#define LED_PRIMARY_PIN _PINNUM(0, 15) // Blue
+#define LED_PRIMARY_PIN _PINNUM(1, 4) // Blue
 #define LED_STATE_ON 1
 
 /*------------------------------------------------------------------*/
@@ -39,25 +39,25 @@
  *------------------------------------------------------------------*/
 #define BUTTONS_NUMBER 2        // none connected at all
 #define BUTTON_1 _PINNUM(0, 18) // unusable: RESET
-#define BUTTON_2 _PINNUM(0, 19) // no connection
+#define BUTTON_2 _PINNUM(0, 20) // no connection
 #define BUTTON_PULL NRF_GPIO_PIN_PULLUP
 
 //--------------------------------------------------------------------+
 // BLE OTA
 //--------------------------------------------------------------------+
-#define BLEDIS_MANUFACTURER "Nice Keyboards"
-#define BLEDIS_MODEL "nice!nano"
+#define BLEDIS_MANUFACTURER "Tsquash"
+#define BLEDIS_MODEL "teton"
 
 //--------------------------------------------------------------------+
 // USB
 //--------------------------------------------------------------------+
-#define USB_DESC_VID 0x239A
-#define USB_DESC_UF2_PID 0x00B3
-#define USB_DESC_CDC_ONLY_PID 0x00B3
+#define USB_DESC_VID 0x0005
+#define USB_DESC_UF2_PID 0x00A1
+#define USB_DESC_CDC_ONLY_PID 0x00A1
 
-#define UF2_PRODUCT_NAME "nice!nano"
-#define UF2_VOLUME_LABEL "NICENANO"
-#define UF2_BOARD_ID "nRF52840-nicenano-v1"
+#define UF2_PRODUCT_NAME "teton"
+#define UF2_VOLUME_LABEL "TETON"
+#define UF2_BOARD_ID "nRF52840-teton-v1"
 #define UF2_INDEX_URL "https://docs.nicekeyboards.com/#/nice!nano/"
 
-#endif // _NICENANO_H
+#endif // _TETON_H
